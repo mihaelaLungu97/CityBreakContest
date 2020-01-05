@@ -17,11 +17,6 @@ class CityBreakDetails
     private $id;
 
     /**
-     * @ORM\Column(type="integer")
-     */
-    private $cityBreak_Id;
-
-    /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Category")
      * @ORM\JoinColumn(nullable=false)
      */
@@ -75,11 +70,6 @@ class CityBreakDetails
     public function getId(): ?int
     {
         return $this->id;
-    }
-
-    public function getCityBreakId(): ?int
-    {
-        return $this->cityBreak_Id;
     }
 
     public function setCityBreakId(int $cityBreak_Id): self

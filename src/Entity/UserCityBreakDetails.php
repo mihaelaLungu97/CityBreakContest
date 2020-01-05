@@ -16,10 +16,7 @@ class UserCityBreakDetails
      */
     private $id;
 
-    /**
-     * @ORM\Column(type="integer")
-     */
-    private $id_UserCity;
+  
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\User")
@@ -36,18 +33,6 @@ class UserCityBreakDetails
     public function getId(): ?int
     {
         return $this->id;
-    }
-
-    public function getIdUserCity(): ?int
-    {
-        return $this->id_UserCity;
-    }
-
-    public function setIdUserCity(int $id_UserCity): self
-    {
-        $this->id_UserCity = $id_UserCity;
-
-        return $this;
     }
 
     public function getIdUser(): ?User

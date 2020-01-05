@@ -17,11 +17,6 @@ class Category
     private $id;
 
     /**
-     * @ORM\Column(type="integer")
-     */
-    private $category_id;
-
-    /**
      * @ORM\Column(type="string", length=30)
      */
     private $continent;
@@ -29,18 +24,6 @@ class Category
     public function getId(): ?int
     {
         return $this->id;
-    }
-
-    public function getCategoryId(): ?int
-    {
-        return $this->category_id;
-    }
-
-    public function setCategoryId(int $category_id): self
-    {
-        $this->category_id = $category_id;
-
-        return $this;
     }
 
     public function getContinent(): ?string
